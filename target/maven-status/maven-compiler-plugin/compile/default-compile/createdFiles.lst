@@ -1,0 +1,15 @@
+edu\eci\arsw\cinema\filter\Filteredbygender.class
+edu\eci\arsw\cinema\entities\Movie.class
+edu\eci\arsw\cinema\controllers\CinemaAPIController.class
+edu\eci\arsw\cinema\filter\Filteringbyavailability.class
+edu\eci\arsw\cinema\repository\CinemaException.class
+edu\eci\arsw\cinema\services\CinemaServices.class
+edu\eci\arsw\cinema\CinemaAPIApplication.class
+edu\eci\arsw\cinema\entities\Seat.class
+edu\eci\arsw\cinema\controllers\ResourceNotFoundException.class
+edu\eci\arsw\cinema\persistence\impl\InMemoryCinemaPersistence.class
+edu\eci\arsw\cinema\entities\CinemaFunction.class
+edu\eci\arsw\cinema\repository\CinemaPersistenceException.class
+edu\eci\arsw\cinema\entities\Cinema.class
+edu\eci\arsw\cinema\filter\FilterFilm.class
+edu\eci\arsw\cinema\repository\CinemaPersitence.class
