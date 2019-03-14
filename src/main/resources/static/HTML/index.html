@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
-    <script src="/src/main/resources/static/JS/apimock.js" ></script>
+    <script src="/src/main/resources/static/JS/apimock.js"></script>
     <script src="/src/main/resources/static/JS/app.js"></script>
 </head>
+
 <body>
     <title>cinemas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-9">
+                        <input type="text" class="form-control" id="cuadroTexto" placeholder="Text">
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
 
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Funcion</th>
+                    <th scope="col">Cinema</th>
+                    <th scope="col">Sillas</th>
+                    <th scope="col">Fecha</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 
 
 
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet"
-      href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 </body>
+
 </html>
