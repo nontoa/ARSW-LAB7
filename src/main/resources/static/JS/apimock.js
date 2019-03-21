@@ -1,43 +1,69 @@
 //@author dsaavedra
 
-apimock = (function () {
-
+apimock = (function() {
 	var mockdata = [];
 
+	mockdata['Cine80'] = [
+		{
+			name: 'Cine80',
+			functions: [
+				{
+					movie: { name: 'Titanic Movie', genre: 'Action' },
+					seats: [
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ]
+					],
+					date: '2018-12-18 15:30'
+				},
+				{
+					movie: { name: 'The Purge', genre: 'Horror' },
+					seats: [
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ]
+					],
+					date: '2018-12-18 15:30'
+				}
+			]
+		}
+	];
 
-
-	mockdata["Cine80"] = [{ "name": "Cine80", "functions": [{ "movie": { "name": "Titanic Movie", "genre": "Action" }, "seats": [[true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true]], "date": "2018-12-18 15:30" }, { "movie": { "name": "The Purge", "genre": "Horror" }, "seats": [[true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true]], "date": "2018-12-18 15:30" }] }];
-
-	mockdata["Cine112"] = [{ "name": "Cine112", "functions": [{ "movie": { "name": "mision imposible", "genre": "Fiction" }, "seats": [[true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true], [true, true, true, true, true, true, true, true, true, true, true, true]], "date": "2018-12-18 15:31" }] }];
-
-
-	var  nameCinema = function(){
-
-		return mockdata.name;
-	};
-
-	var listaFunctions = function(){
-		return mockdata.functions;
-	};
-
-	var setName = function(name){
-		mockdata[name].name=nameCinema;
-		mockdata[name].functions=listaFunctions;
-		return mockdata[name];
-	};
-
+	mockdata['Cine112'] = [
+		{
+			name: 'Cine112',
+			functions: [
+				{
+					movie: { name: 'mision imposible', genre: 'Fiction' },
+					seats: [
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ],
+						[ true, true, true, true, true, true, true, true, true, true, true, true ]
+					],
+					date: '2018-12-18 15:31'
+				}
+			]
+		}
+	];
 
 	return {
-		getCinemaByName: function (name, callback) {
-			callback(
-				mockdata[name]
-				
-			);
+		getCinemaByName: function(name, callback) {
+			return callback(mockdata[name]);
 		},
-		publicMethod : setName(name)
-
-	}
-
+		getCinemas:function(callback){
+			return callback(mockdata);
+		}
+	};
 })();
-
-apimock.getCinemaByName("Cine80");
